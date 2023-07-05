@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -Ap1 | sort -df | tr '\n' ','; echo
+printf "%s\n" . .. "$(ls -A1 | sort -d -f -k1.1,1.1 -k1.2n,1.2 -k1.3,1.999)" | awk '{ORS = (NR % 2 == 0) ? ",\n" : " "}1; END {print ""}'
