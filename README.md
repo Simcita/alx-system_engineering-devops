@@ -1,1 +1,1 @@
-This is the repository for bash projects
+This is a README about shell permissions projects
